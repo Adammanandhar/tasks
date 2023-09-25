@@ -5,7 +5,7 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-      const num_len = numbers.length;
+    const num_len = numbers.length;
 
     if (num_len === 0) {
         numbers = [];
@@ -102,7 +102,7 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-     // Using `reduce` method - awesome!
+    // Using `reduce` method - awesome!
     const sum = addends.reduce(
         (currentTotal: number, num: number) => currentTotal + num,
         0
@@ -127,8 +127,7 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-
-    const value_copy=[...values];
+    const value_copy = [...values];
     // Using `reduce` method - awesome!
     const sum = value_copy.reduce(
         (currentTotal: number, num: number) => currentTotal + num,
@@ -139,11 +138,13 @@ export function injectPositive(values: number[]): number[] {
     );
 
     if (negative_index !== -1) {
-        let new_sum=value_copy.slice(0,negative_index).reduce(
-        (currentTotal: number, num: number) => currentTotal + num,
-        0
-    );
-        value_copy.splice(negative_index+1 , 0, new_sum);
+        let new_sum = value_copy
+            .slice(0, negative_index)
+            .reduce(
+                (currentTotal: number, num: number) => currentTotal + num,
+                0
+            );
+        value_copy.splice(negative_index + 1, 0, new_sum);
     } else {
         value_copy.push(sum);
     }
