@@ -97,7 +97,7 @@ export function toMarkdown(question: Question): string {
     let first_two = `# ${Name}\n${Body}`;
 
     if (question_choice === "multiple_choice_question") {
-        for (let option of question.options) {
+        for (const option of question.options) {
             first_two += `\n- ${option}`;
         }
     }
