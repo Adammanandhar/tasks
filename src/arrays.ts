@@ -138,7 +138,7 @@ export function injectPositive(values: number[]): number[] {
     );
 
     if (negative_index !== -1) {
-        let new_sum = value_copy
+        const new_sum = value_copy
             .slice(0, negative_index)
             .reduce(
                 (currentTotal: number, num: number) => currentTotal + num,
