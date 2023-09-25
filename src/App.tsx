@@ -27,7 +27,7 @@ function App(): JSX.Element {
                         <Col>Manandhar</Col>
                     </Row>
                 </Container>
-                UD CISC275 with React Hooks and TypeScript
+                UM COS420 with React Hooks and TypeScript
             </header>
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
