@@ -145,10 +145,7 @@ export function sameType(questions: Question[]): boolean {
         return true;
     }
     const firstType = questions[0].type;
-    return questions.reduce(
-        (hold_true, question) => hold_true && question.type === firstType,
-        true
-    );
+    return questions.every((question) => question.type === firstType);
 }
 
 /***
