@@ -1,6 +1,12 @@
 import React from "react";
 import "./App.css";
 import { Button, Col, Container, Row } from "react-bootstrap";
+import { ChangeType } from "./components/ChangeType";
+import { RevealAnswer } from "./components/RevealAnswer";
+import { StartAttempt } from "./components/StartAttempt";
+import { TwoDice } from "./components/TwoDice";
+import { CycleHoliday } from "./components/CycleHoliday";
+import { Counter } from "./components/Counter";
 
 function App(): JSX.Element {
     return (
@@ -11,7 +17,7 @@ function App(): JSX.Element {
                     src="https://media.licdn.com/dms/image/C4E03AQHx03oyKy9IWg/profile-displayphoto-shrink_800_800/0/1625844227180?e=2147483647&v=beta&t=IcutS7mUL28K7sOMQ4STn5SOto9gAyw6YTDvdfPzRnU"
                     alt="A picture of my dog Ada"
                 />
-                My hobbiest:
+                My hobbies:
                 <ul>
                     <li>Watch Soccer</li>
                     <li>Hike</li>
@@ -23,16 +29,23 @@ function App(): JSX.Element {
                 <Container>
                     <Row>
                         <Col>Aayush</Col>
-
                         <Col>Manandhar</Col>
                     </Row>
                 </Container>
                 UM COS420 with React Hooks and TypeScript
             </header>
-            <p>
-                Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload. Aayush Manandhar.
-            </p>
+            <hr></hr>
+            <Counter></Counter>
+            <hr />
+            <RevealAnswer></RevealAnswer>
+            <hr />
+            <StartAttempt></StartAttempt>
+            <hr />
+            <TwoDice></TwoDice>
+            <hr />
+            <ChangeType></ChangeType>
+            <hr />
+            <CycleHoliday></CycleHoliday>
         </div>
     );
 }
