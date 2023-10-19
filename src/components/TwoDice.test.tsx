@@ -51,10 +51,17 @@ describe("TwoDice Component tests", () => {
         leftButton.click();
         leftButton.click();
         // Then the random function should be called 3 times
+<<<<<<< HEAD
         expect(mathRandomFunction).toBeCalledTimes(11);
         // And the number to be 5
         const leftNumber = extractDigits(screen.getByTestId("left-die"));
         expect(leftNumber).toEqual(4);
+=======
+        expect(mathRandomFunction).toBeCalledTimes(3);
+        // And the number to be 5
+        const leftNumber = extractDigits(screen.getByTestId("left-die"));
+        expect(leftNumber).toEqual(5);
+>>>>>>> upstream/task-components
     });
     // Clicking right button changes second number
     test("Clicking right button changes second number", () => {
@@ -63,10 +70,17 @@ describe("TwoDice Component tests", () => {
         rightButton.click();
         rightButton.click();
         // Then the random function should be called 3 times
+<<<<<<< HEAD
         expect(mathRandomFunction).toBeCalledTimes(11);
         // And the number to be 5
         const rightNumber = extractDigits(screen.getByTestId("right-die"));
         expect(rightNumber).toEqual(4);
+=======
+        expect(mathRandomFunction).toBeCalledTimes(3);
+        // And the number to be 5
+        const rightNumber = extractDigits(screen.getByTestId("right-die"));
+        expect(rightNumber).toEqual(5);
+>>>>>>> upstream/task-components
     });
     // Rolling two different numbers does not win or lose the game
     test("Rolling two different numbers does not win or lose the game", () => {
@@ -81,8 +95,13 @@ describe("TwoDice Component tests", () => {
         // Then the numbers are not equal
         const leftNumber = extractDigits(leftDie);
         const rightNumber = extractDigits(rightDie);
+<<<<<<< HEAD
         expect(leftNumber).toEqual(5);
         expect(rightNumber).toEqual(1);
+=======
+        expect(leftNumber).toEqual(1);
+        expect(rightNumber).toEqual(6);
+>>>>>>> upstream/task-components
         // And then the game is not won
         const winText = screen.queryByText(/Win/i);
         expect(winText).toBeNull();
@@ -105,14 +124,24 @@ describe("TwoDice Component tests", () => {
         // Then the numbers are not equal
         const leftNumber = extractDigits(leftDie);
         const rightNumber = extractDigits(rightDie);
+<<<<<<< HEAD
         expect(leftNumber).toEqual(5);
         expect(rightNumber).toEqual(4);
+=======
+        expect(leftNumber).toEqual(1);
+        expect(rightNumber).toEqual(1);
+>>>>>>> upstream/task-components
         // And then the game is not won
         const winText = screen.queryByText(/Win/i);
         expect(winText).toBeNull();
         // And then the game is lost
+<<<<<<< HEAD
         const loseText = screen.queryByText(/Lose/i);
         expect(loseText).toBeNull();
+=======
+        const loseText = screen.getByText(/Lose/i);
+        expect(loseText).toBeInTheDocument();
+>>>>>>> upstream/task-components
     });
     test("Getting matching numbers wins the game", () => {
         // Given
@@ -128,8 +157,13 @@ describe("TwoDice Component tests", () => {
         // Then the numbers are not equal
         const leftNumber = extractDigits(leftDie);
         const rightNumber = extractDigits(rightDie);
+<<<<<<< HEAD
         expect(leftNumber).toEqual(4);
         expect(rightNumber).toEqual(4);
+=======
+        expect(leftNumber).toEqual(5);
+        expect(rightNumber).toEqual(5);
+>>>>>>> upstream/task-components
         // And then the game is not lost
         const loseText = screen.queryByText(/Lose/i);
         expect(loseText).toBeNull();

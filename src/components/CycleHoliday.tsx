@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
+<<<<<<< HEAD
 enum Holiday {
     NEWYEAR = "🎉",
     JULYFOURTH = "🎆",
@@ -47,4 +48,8 @@ export function CycleHoliday(): JSX.Element {
             <Button onClick={advanceByYear}>Advance by Year</Button>
         </div>
     );
+=======
+export function CycleHoliday(): JSX.Element {
+    return <div>Cycle Holiday</div>;
+>>>>>>> upstream/task-components
 }
