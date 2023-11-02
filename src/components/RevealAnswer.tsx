@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
 export function RevealAnswer(): JSX.Element {
-<<<<<<< HEAD
     const [isVisible, setIsVisible] = useState(false);
     const changeVisibility = () => {
         setIsVisible(!isVisible);
@@ -13,7 +12,4 @@ export function RevealAnswer(): JSX.Element {
             {isVisible && <div>42</div>}
         </div>
     );
-=======
-    return <div>Reveal Answer</div>;
->>>>>>> upstream/task-components
 }

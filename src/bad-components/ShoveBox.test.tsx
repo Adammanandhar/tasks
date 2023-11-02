@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { ShoveBox } from "./ShoveBox";
+import { ShoveBox } from "./ShoveBox.1";
 
 describe("ShoveBox Component tests", () => {
     beforeEach(() => {
